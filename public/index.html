@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basement Cable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <section id="landing">
+    <h1 class="logo">BASEMENT CABLE</h1>
+    <div class="crt">
+      <div class="crt-antenna"></div>
+      <canvas class="static" id="landing-static" width="160" height="120"></canvas>
+      <div class="crt-knobs"><i></i><i></i></div>
+    </div>
+    <p class="tagline">Your own TV network, built from your own tapes.<br><b>Always live, forever.</b></p>
+    <div id="landing-body"></div>
+  </section>
+
+  <section id="app" hidden>
+    <header class="topbar">
+      <button class="brand" id="home" title="Back to the title screen"><span class="brand-mark">B</span><span>Basement<br>Cable</span></button>
+      <nav>
+        <button id="nav-guide" class="nav-btn">GUIDE</button>
+        <button id="nav-watch" class="nav-btn">WATCH</button>
+        <button id="nav-directory" class="nav-btn">DIRECTORY</button>
+      </nav>
+      <time id="clock"></time>
+    </header>
+
+    <main class="layout">
+      <div class="panel player-panel">
+        <div class="screen" id="screen">
+          <video id="video" playsinline></video>
+          <canvas class="static" id="tv-static" width="160" height="120"></canvas>
+          <div id="osd"></div>
+          <div id="tape-error" hidden>TAPE TROUBLE<br><small>Back after this program</small></div>
+        </div>
+        <div class="controls">
+          <button id="ch-down" title="Channel down (S)">&#9660;</button>
+          <span id="ch-label">CH --</span>
+          <button id="ch-up" title="Channel up (W)">&#9650;</button>
+          <button id="mute" title="Mute (M)">MUTE</button>
+          <input id="volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume">
+          <span class="spacer"></span>
+          <button id="random" title="Random channel (R)">SURF</button>
+          <button id="fullscreen" title="Fullscreen (F)">FULL</button>
+        </div>
+      </div>
+
+      <div class="panel info-panel">
+        <div class="info-head">
+          <span class="chan-icon" id="info-icon"></span>
+          <div><div id="info-name" class="yellow big"></div><div id="info-number" class="dim"></div></div>
+          <span class="live">&#9632; LIVE</span>
+        </div>
+        <div class="yellow label">NOW PLAYING</div>
+        <div id="info-title" class="title"></div>
+        <p id="info-desc"></p>
+        <div class="progress-row">
+          <span id="info-elapsed"></span>
+          <div class="progress"><div id="info-bar"></div></div>
+          <span id="info-duration"></span>
+        </div>
+        <div class="yellow label">UP NEXT</div>
+        <ul id="info-next"></ul>
+      </div>
+
+      <div class="panel guide-panel" id="guide"></div>
+      <div class="panel guide-panel" id="directory" hidden></div>
+    </main>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>
