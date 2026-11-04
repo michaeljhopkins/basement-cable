@@ -363,6 +363,8 @@ async function refresh() {
     if (chan) { renderInfo(); renderGuide(); }
   }
   if (view === 'landing') renderLanding(lib);
+  // A TV with no keyboard (?autostart) tunes in by itself instead of waiting on the title screen.
+  if (view === 'landing' && channels.length && new URLSearchParams(location.search).has('autostart')) tuneIn();
   setTimeout(refresh, !channels.length ? 2000 : 120000);
 }
 
