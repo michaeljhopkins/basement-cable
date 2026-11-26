@@ -128,6 +128,16 @@ const CHANNELS = [
     },
   },
   {
+    number: 18, name: 'The X-Files',
+    shows: {
+      'Season 10': ['the-x-files-1993-season-10-complete-720p-blu-ray-x-264-i-c'],
+      'Season 11': ['TheXfilesSeason11_201603'],
+      Broadcasts: ['X-Files_Incomplete_FOX_WOC_1994-05-27', 'X-Files_FOX_WOC_and_2020_ABC_WOC_and_48_Hours_NBC_WOC_Incomplete_1994-12-23',
+        'TheXFilesWBWednesday1999', 'X-Files_WB39_WOC_2000-04-2x', 'X-Files_Season_8_Finale_WOC_2001-05-20'],
+      'Season 1-9': ['dvd-video-collection_202411'],
+    },
+  },
+  {
     number: 16, name: 'Nick at Nite',
     shows: {
       Broadcasts: ['wnyw-5-the-bed-sitting-room-and-i-love-lucy-vh-1-and-nick-at-nite-1989', 'vts-01-1_20260307', '1992-nick-at-nite-top-10-rerun-countdown-woc', '1994-lucy',
